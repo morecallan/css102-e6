@@ -1,3 +1,4 @@
+
 body {
 	font-family: 'Shadows Into Light Two', cursive;
 }
@@ -21,16 +22,17 @@ body {
 	text-align: center;
 }
 
-.description {
-	padding: 2%;
-}
 
 .description h6 {
+  padding: 2%;
 	font-size: 1.5em;
 	padding: 2%;
 }
 
 .title {
+  padding: 2%;
+	font-size: 1.5em;
+	font-family: 'Dancing Script', cursive;
 	text-align: center;
 	text-transform: uppercase;
 }
