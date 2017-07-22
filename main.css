@@ -1,4 +1,11 @@
-/* Card Styling */
+
+body {
+	font-family: 'Shadows Into Light Two', cursive;
+}
+
+
+/*****CARD STYLING*****/
+
 .product {
 	width: 400px;
 	border: 2px solid slategray;
@@ -11,20 +18,20 @@
 }
 
 .description > * {
-	text-align: center;
 	margin: 0;
+	text-align: center;
 }
 
-.description {
-	padding: 2%;
-}
 
 .description h6 {
-	padding: 2%;
+  padding: 2%;
 	font-size: 1.5em;
+	padding: 2%;
 }
 
 .title {
+  padding: 2%;
+	font-size: 1.5em;
 	font-family: 'Dancing Script', cursive;
 	text-align: center;
 	text-transform: uppercase;
