@@ -51,7 +51,6 @@ allProducts.push(product3);
 allProducts.push(product4);
 allProducts.push(product5);
 
-console.log("All my weird baby products: ", allProducts);
 
 var productContainer = document.getElementById("product-container");
 
@@ -75,7 +74,6 @@ for (var i = 0; i < allProducts.length; i++) {
     domString +=    	'</div>';
     domString +=      '</section>';
 
-    console.log("Dom String from for loop", domString)
     productContainer.innerHTML += domString;
 }
 
