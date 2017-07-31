@@ -45,37 +45,66 @@ var product5 = {
   soldOut: true
 };
 
+var product6 = {
+  name: "Not Boob Hat",
+  imagePath: "./images/boobHat.jpg",
+  imageAlt: "Product: Boob Hat",
+  description: "This is a really good description of our product. It really sells it. It's the best.",
+  price: 36,
+  soldOut: true
+};
+
 allProducts.push(product1);
 allProducts.push(product2);
 allProducts.push(product3);
 allProducts.push(product4);
 allProducts.push(product5);
+allProducts.push(product6);
 
 
 var productContainer = document.getElementById("product-container");
 
-for (var i = 0; i < allProducts.length; i++) {
-
-	var currentProduct = allProducts[i];
-
-	var domString = "";
 
 
-	domString +=      '<section class="product">';
-    domString +=    	'<div class="title">';
-    domString +=    	   '<h2>' + currentProduct.name + '</h2>';
-    domString +=    	'</div>';
-    domString +=    	'<div class="image">';
-    domString +=    	  '<img src="'+ currentProduct.imagePath +'" alt="' + currentProduct.imageAlt + '">';
-    domString +=    	'</div>';
-    domString +=    	'<div class="description">';
-    domString +=    		'<p>' +  currentProduct.description +'</p>';
-    domString +=    	    '<h6>$' + currentProduct.price +'</h6>';
-    domString +=    	'</div>';
-    domString +=      '</section>';
+function buildDomString(product){
+  var domString = "";
 
-    productContainer.innerHTML += domString;
+  domString +=      '<section class="product">';
+  domString +=      '<div class="title">';
+  domString +=         '<h2>' + product.name + '</h2>';
+  domString +=      '</div>';
+  domString +=      '<div class="image">';
+  domString +=        '<img src="'+ product.imagePath +'" alt="' + product.imageAlt + '">';
+  domString +=      '</div>';
+  domString +=      '<div class="description">';
+  domString +=        '<p>' +  product.description +'</p>';
+  domString +=          '<h6>$' + product.price +'</h6>';
+  domString +=      '</div>';
+  if (product.soldOut) {
+    domString += '<div class="sold-out">';
+    domString +=  '<img src="./images/soldOut.png" alt="Sold Out">';
+    domString +=  '</div>';
+  }
+  domString +=      '</section>';
+  return domString;
 }
+
+function printProductArrayToDom(productArray){
+  for (var i = 0; i < productArray.length; i++) {
+
+    var currentProduct = productArray[i];
+    var productDomString = buildDomString(currentProduct);
+    productContainer.innerHTML += productDomString;
+  }
+}
+
+printProductArrayToDom(allProducts);
+
+
+
+
+
+
 
 
 
