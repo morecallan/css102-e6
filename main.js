@@ -45,11 +45,21 @@ var product5 = {
   soldOut: true
 };
 
+var product6 = {
+  name: "Not Boob Hat",
+  imagePath: "./images/boobHat.jpg",
+  imageAlt: "Product: Boob Hat",
+  description: "This is a really good description of our product. It really sells it. It's the best.",
+  price: 36,
+  soldOut: true
+};
+
 allProducts.push(product1);
 allProducts.push(product2);
 allProducts.push(product3);
 allProducts.push(product4);
 allProducts.push(product5);
+allProducts.push(product6);
 
 
 var productContainer = document.getElementById("product-container");
@@ -70,6 +80,11 @@ function buildDomString(product){
   domString +=        '<p>' +  product.description +'</p>';
   domString +=          '<h6>$' + product.price +'</h6>';
   domString +=      '</div>';
+  if (product.soldOut) {
+    domString += '<div class="sold-out">';
+    domString +=  '<img src="./images/soldOut.png" alt="Sold Out">';
+    domString +=  '</div>';
+  }
   domString +=      '</section>';
   return domString;
 }
