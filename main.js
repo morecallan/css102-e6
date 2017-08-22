@@ -99,19 +99,3 @@ function printProductArrayToDom(productArray){
 }
 
 printProductArrayToDom(allProducts);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
