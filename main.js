@@ -52,11 +52,9 @@ allProducts.push(product3);
 allProducts.push(product4);
 allProducts.push(product5);
 
-console.log("All my weid baby stuff: ", allProducts);
-
 var productContainer = document.getElementById("product-container");
 
-function buildDomString(product) {
+function buildDomString(product) { //product is defining variable= think of it as var product=
   var domString = "";
 
     domString += '<section class="product">';
