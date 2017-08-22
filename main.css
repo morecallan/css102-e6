@@ -1,3 +1,4 @@
+
 body {
 	font-family: 'Shadows Into Light Two', cursive;
 }
@@ -7,12 +8,11 @@ h1 {
 }
 
 /*****CARD STYLING*****/
-
-
+/* Card Styling */
 .product {
+	margin: 1%;
 	width: 400px;
 	border: 2px solid slategray;
-	margin: 1%;
 }
 
 .image img {
@@ -22,8 +22,10 @@ h1 {
 }
 
 .description > * {
+
 	margin: 0;
 	text-align: center;
+
 }
 
 .description {
@@ -31,35 +33,45 @@ h1 {
 }
 
 .description h6 {
+
 	font-size: 1.5em;
 	padding: 2%;
 }
 
 .title {
+
+	padding: 2%;
+	font-size: 1.5em;
 	text-align: center;
 	text-transform: uppercase;
 }
 
-/*****CARD LAYOUT*****/
 
+
+/* CARD LAYOUT */
 #product-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-/*****SOLD OUT*****/
+
+/* SOLD OUT */
+/*.sold-out {
+	position: relative;
+	top: -400px;
+}*/
+
+/*.sold-out {
+	position: absolute;
+	top: 0;
+}*/
 
 .product {
 	position: relative;
+
+	z-index: 999;
 }
-
-.sold-out {
-	position: absolute;
-	top: 90px;
-}
-
-
 
 
 
